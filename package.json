@@ -1,8 +1,6 @@
 {
-  "name": "editalfit-web",
-  "version": "0.1.0",
+  "name": "editalfit-frontend",
   "private": true,
-  "description": "EditalFit — SaaS web responsivo para diagnóstico de aderência a editais de inovação",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,14 +8,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.1.6",
+    "next": "^15.1.6",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.10.5",
-    "@types/react": "^19.0.7",
-    "@types/react-dom": "^19.0.3",
-    "typescript": "^5.7.3"
+    "@types/node": "20.11.5",
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3",
+    "typescript": "^5"
   }
 }
