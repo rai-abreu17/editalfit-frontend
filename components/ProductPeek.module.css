@@ -1,0 +1,143 @@
+.peek {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  background: linear-gradient(155deg, #1b2d5c 0%, #0f1e45 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 18px 18px 16px;
+  color: #fff;
+  box-shadow:
+    0 30px 60px -16px rgba(0, 0, 0, 0.6),
+    0 10px 30px -8px rgba(56, 189, 248, 0.18),
+    0 1px 0 rgba(255, 255, 255, 0.08) inset;
+}
+
+.float {
+  animation: floatTilt 7s ease-in-out infinite;
+}
+@keyframes floatTilt {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+.version {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 4px 9px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.scoreRow {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--warn-100);
+  color: var(--warn-700);
+  margin-bottom: 6px;
+}
+.labelPip {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.summary {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.crits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.crit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 500;
+}
+.pip {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+}
+.pip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: inherit;
+  animation: pipPulse 2.6s ease-in-out infinite;
+}
+@keyframes pipPulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.6);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(2.4);
+  }
+}
+.ok {
+  background: #6dd8a0;
+}
+.warn {
+  background: var(--warn-500);
+}
+.danger {
+  background: var(--danger-500);
+}

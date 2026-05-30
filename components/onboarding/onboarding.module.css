@@ -1,0 +1,337 @@
+.wrap {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 20px 48px;
+  background:
+    radial-gradient(ellipse 70% 40% at 50% 0%, rgba(120, 160, 230, 0.16) 0%, transparent 60%),
+    var(--canvas);
+}
+.brand {
+  margin-bottom: 24px;
+}
+.card {
+  width: 100%;
+  max-width: 560px;
+  background: var(--surface);
+  border-radius: var(--r-2xl);
+  box-shadow: var(--sh-card-lg);
+  padding: 18px 22px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.back {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+  background: rgba(14, 27, 44, 0.05);
+  color: var(--ink-700);
+}
+.back:hover {
+  background: rgba(14, 27, 44, 0.1);
+}
+.topbarTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-700);
+}
+.skip {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-500);
+}
+.skip:hover {
+  color: var(--ink-800);
+  text-decoration: underline;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-600);
+  font-weight: 600;
+}
+.track {
+  flex: 1;
+  height: 4px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  background: var(--brand-700);
+  transition: width 0.35s cubic-bezier(0.34, 1.4, 0.6, 1);
+}
+
+.body {
+  min-height: 0;
+}
+.eyebrow {
+  display: inline-flex;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-700);
+  font-weight: 700;
+  padding: 4px 9px;
+  background: var(--brand-50);
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.sub {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ink-600);
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+
+.opts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.optsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--r-md);
+  text-align: left;
+  transition: all 0.15s;
+}
+.opt:hover {
+  border-color: var(--border-strong);
+}
+.opt.active {
+  border-color: var(--brand-700);
+  background: var(--brand-50);
+  box-shadow: var(--focus-ring);
+}
+.radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-strong);
+  flex-shrink: 0;
+  position: relative;
+  background: var(--surface);
+}
+.opt.active .radio {
+  border-color: var(--brand-700);
+  border-width: 2px;
+}
+.opt.active .radio::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--brand-700);
+}
+.check {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-strong);
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+}
+.opt.active .check {
+  background: var(--brand-700);
+  border-color: var(--brand-700);
+}
+.optText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.optLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+.optDesc {
+  font-size: 12.5px;
+  color: var(--ink-600);
+  font-weight: 300;
+}
+
+.search {
+  position: relative;
+  margin-bottom: 12px;
+}
+.search svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ink-400);
+  pointer-events: none;
+}
+.search input {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--r-md);
+  padding: 12px 14px 12px 40px;
+  font-size: 14.5px;
+  color: var(--ink-900);
+  font-weight: 500;
+  outline: none;
+}
+.search input:focus {
+  border-color: var(--brand-700);
+  box-shadow: var(--focus-ring);
+}
+
+.stateList {
+  max-height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0 -6px;
+  padding: 0 6px;
+}
+.stateEmpty {
+  padding: 14px;
+  color: var(--ink-500);
+  font-size: 13.5px;
+  font-weight: 500;
+}
+.stateRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: var(--r-sm);
+  text-align: left;
+  transition: background 0.12s;
+}
+.stateRow:hover {
+  background: var(--surface-2);
+}
+.stateRow.active {
+  background: var(--brand-50);
+}
+.stateUf {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink-400);
+  padding: 3px 7px;
+  background: rgba(13, 27, 62, 0.04);
+  border-radius: 5px;
+}
+.stateRow.active .stateUf {
+  color: var(--brand-700);
+  background: rgba(13, 46, 107, 0.1);
+}
+.stateName {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+.stateRow.active .stateName {
+  color: var(--brand-700);
+}
+.stateCheck {
+  color: var(--brand-700);
+  display: grid;
+  place-items: center;
+  width: 16px;
+}
+
+.binary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.binaryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 18px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  text-align: left;
+  transition: all 0.15s;
+}
+.binaryCard:hover {
+  border-color: var(--border-strong);
+}
+.binaryCard.active {
+  border-color: var(--brand-700);
+  background: var(--brand-50);
+  box-shadow: var(--focus-ring);
+}
+.binaryIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: var(--surface-2);
+  color: var(--ink-700);
+  display: grid;
+  place-items: center;
+  margin-bottom: 4px;
+}
+.binaryCard.active .binaryIcon {
+  background: var(--brand-700);
+  color: #fff;
+}
+.binaryLabel {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink-900);
+}
+.binaryDesc {
+  font-size: 12.5px;
+  color: var(--ink-600);
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+@media (max-width: 520px) {
+  .optsGrid,
+  .binary {
+    grid-template-columns: 1fr;
+  }
+}

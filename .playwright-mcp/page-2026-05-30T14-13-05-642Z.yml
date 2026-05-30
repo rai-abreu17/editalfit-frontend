@@ -1,0 +1,60 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - link "EditalFit — início" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e6]: EditalFit
+    - generic [ref=e8]:
+      - heading "Continue de onde parou." [level=1] [ref=e9]
+      - paragraph [ref=e10]: Seus diagnósticos, projetos salvos e editais sugeridos te esperam.
+      - generic [ref=e11]:
+        - generic [ref=e12]: E-mail
+        - textbox "E-mail" [ref=e14]:
+          - /placeholder: voce@instituicao.br
+          - text: ana.lima@usp.br
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]: Senha
+          - link "Esqueci minha senha" [ref=e18] [cursor=pointer]:
+            - /url: /recuperar-senha
+        - generic [ref=e19]:
+          - textbox "Senha Esqueci minha senha" [ref=e20]:
+            - /placeholder: Sua senha
+            - text: Centelha2026!
+          - button "Mostrar senha" [ref=e21] [cursor=pointer]:
+            - img [ref=e22]
+      - button "Entrar" [ref=e24] [cursor=pointer]:
+        - text: Entrar
+        - img [ref=e26]
+      - generic [ref=e28]: ou continue com
+      - button "Entrar com Google" [ref=e29] [cursor=pointer]:
+        - img [ref=e30]
+        - text: Entrar com Google
+      - generic [ref=e35]:
+        - text: Ainda não tem conta?
+        - link "Criar conta gratuita →" [ref=e36] [cursor=pointer]:
+          - /url: /cadastro
+  - complementary [ref=e37]:
+    - generic [ref=e38]:
+      - generic [ref=e39]: Bem-vindo de volta
+      - heading "Seus diagnósticos te esperam." [level=2] [ref=e40]
+      - paragraph [ref=e41]: Retome os projetos salvos, veja a evolução do score e descubra novos editais que combinam com você.
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - generic [ref=e45]: FAPEMA · Inova MA 2026
+            - generic [ref=e46]: Programa Centelha — Ideação
+          - generic [ref=e47]: v3
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - img [ref=e50]
+            - generic [ref=e53]:
+              - generic [ref=e54]: "0"
+              - generic [ref=e55]: de 100
+          - generic [ref=e56]:
+            - generic [ref=e57]: Aderência parcial
+            - generic [ref=e59]: Base técnica sólida; reforce mercado.
+        - generic [ref=e60]:
+          - generic [ref=e61]: Inovação
+          - generic [ref=e63]: Mercado
+          - generic [ref=e65]: Time
+          - generic [ref=e67]: Orçamento

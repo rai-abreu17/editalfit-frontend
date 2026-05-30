@@ -1,0 +1,151 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 16px 16px 14px;
+  cursor: pointer;
+  box-shadow: var(--sh-card);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+  min-height: 132px;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sh-lift);
+}
+.card:active {
+  transform: translateY(0);
+}
+
+.actions {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transform: translateY(-2px);
+  transition:
+    opacity 0.18s,
+    transform 0.18s;
+  pointer-events: none;
+}
+.card:hover .actions,
+.card:focus-within .actions {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.action {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  border: 1px solid rgba(13, 27, 62, 0.08);
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink-600);
+  display: grid;
+  place-items: center;
+  transition:
+    color 0.15s,
+    background 0.15s,
+    border-color 0.15s;
+}
+.action:hover {
+  color: var(--brand-700);
+  background: #fff;
+  border-color: rgba(13, 46, 107, 0.18);
+}
+.danger:hover {
+  color: var(--danger-700);
+  border-color: rgba(153, 27, 27, 0.22);
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex: 1;
+}
+.name {
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink-900);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.edital {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand-700);
+  font-weight: 700;
+  margin-top: 7px;
+}
+.edital svg {
+  color: var(--brand-700);
+  flex-shrink: 0;
+}
+
+/* status fades out on hover so the secondary actions can take its place */
+.statusWrap {
+  flex-shrink: 0;
+  transition: opacity 0.18s;
+}
+.card:hover .statusWrap {
+  opacity: 0;
+}
+
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(13, 27, 62, 0.05);
+}
+.meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--ink-500);
+  font-weight: 500;
+}
+.meta svg {
+  color: var(--ink-400);
+  flex-shrink: 0;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-2);
+  color: var(--brand-700);
+  padding: 7px 12px;
+  border-radius: var(--r-pill);
+  font-size: 12.5px;
+  font-weight: 700;
+  border: 1px solid rgba(13, 46, 107, 0.08);
+  transition:
+    background 0.15s,
+    color 0.15s,
+    border-color 0.15s;
+}
+.card:hover .cta {
+  background: var(--brand-700);
+  color: #fff;
+  border-color: var(--brand-700);
+}

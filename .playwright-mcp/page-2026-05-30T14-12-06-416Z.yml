@@ -1,0 +1,83 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - link "EditalFit — início" [ref=e4] [cursor=pointer]:
+      - /url: /inicio
+      - text: EditalFit
+    - link "Novo projeto" [ref=e6] [cursor=pointer]:
+      - /url: /novo-projeto
+      - img [ref=e7]
+      - text: Novo projeto
+    - navigation "Navegação principal" [ref=e9]:
+      - generic [ref=e10]: Menu
+      - link "Início" [ref=e11] [cursor=pointer]:
+        - /url: /inicio
+        - img [ref=e12]
+        - text: Início
+      - link "Match de editais" [ref=e14] [cursor=pointer]:
+        - /url: /match
+        - img [ref=e15]
+        - text: Match de editais
+      - link "Modelos de documentos" [ref=e17] [cursor=pointer]:
+        - /url: /modelos
+        - img [ref=e18]
+        - text: Modelos de documentos
+      - link "Configurações" [ref=e21] [cursor=pointer]:
+        - /url: /configuracoes
+        - img [ref=e22]
+        - text: Configurações
+    - link "AL Ana Lima ana.lima@usp.br" [ref=e27] [cursor=pointer]:
+      - /url: /configuracoes
+      - generic [ref=e28]: AL
+      - generic [ref=e29]:
+        - generic [ref=e30]: Ana Lima
+        - generic [ref=e31]: ana.lima@usp.br
+  - generic [ref=e32]:
+    - banner [ref=e33]:
+      - generic [ref=e34]:
+        - img [ref=e35]
+        - searchbox "Buscar" [ref=e38]
+      - button "Notificações" [ref=e39] [cursor=pointer]:
+        - img [ref=e40]
+      - link "Sua conta" [ref=e44] [cursor=pointer]:
+        - /url: /configuracoes
+        - text: AL
+    - main [ref=e45]:
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - link "Voltar" [ref=e48] [cursor=pointer]:
+            - /url: /novo-projeto/upload
+            - img [ref=e49]
+          - generic [ref=e51]:
+            - generic [ref=e52]: Diagnóstico
+            - generic [ref=e53]: Centelha MA · Ideação
+        - alert [ref=e54]:
+          - img [ref=e56]
+          - heading "Não foi possível concluir a análise." [level=1] [ref=e59]
+          - paragraph [ref=e60]: Um dos arquivos enviados não pôde ser lido. Ajuste o item abaixo e tente de novo — o restante da sua proposta continua salvo.
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - img [ref=e63]
+            - text: Arquivo com problema
+          - generic [ref=e66]:
+            - img [ref=e68]
+            - generic [ref=e72]:
+              - generic [ref=e73]: cronograma-fisico-financeiro.png
+              - generic [ref=e74]: Não conseguimos ler este arquivo. Verifique se ele está corrompido ou em um formato inválido.
+        - status [ref=e75]:
+          - img [ref=e77]
+          - generic [ref=e80]:
+            - generic [ref=e81]: Seus documentos estão preservados
+            - generic [ref=e82]:
+              - text: Nada foi perdido. O projeto voltou para
+              - strong [ref=e83]: Rascunho
+              - text: ", exatamente como estava antes de você clicar em Analisar."
+        - generic [ref=e84]:
+          - button "Tentar analisar novamente" [ref=e85] [cursor=pointer]:
+            - text: Tentar analisar novamente
+            - img [ref=e87]
+          - link "Revisar documentos" [ref=e89] [cursor=pointer]:
+            - /url: /novo-projeto/upload?modo=edicao
+            - img [ref=e90]
+            - text: Revisar documentos
+          - link "Voltar ao Home" [ref=e93] [cursor=pointer]:
+            - /url: /inicio

@@ -1,0 +1,59 @@
+- generic [ref=e4]:
+  - link "EditalFit — início" [ref=e5] [cursor=pointer]:
+    - /url: /
+    - generic [ref=e6]: EditalFit
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - img [ref=e10]
+      - text: Redefinindo para
+      - strong [ref=e13]: ana.lima@usp.br
+    - heading "Defina uma nova senha." [level=1] [ref=e14]:
+      - text: Defina uma
+      - text: nova senha.
+    - paragraph [ref=e15]: Escolha algo forte. Você será desconectado dos outros dispositivos por segurança.
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]: Nova senha
+        - generic [ref=e19]:
+          - img [ref=e20]
+          - text: 8+ caracteres
+      - generic [ref=e23]:
+        - textbox "Nova senha 8+ caracteres" [ref=e24]:
+          - /placeholder: Crie uma senha forte
+          - text: Centelha2026!
+        - button "Mostrar senha" [ref=e25] [cursor=pointer]:
+          - img [ref=e26]
+      - generic [ref=e33]: Forte
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - img [ref=e37]
+          - text: 8+ caracteres
+        - generic [ref=e40]:
+          - img [ref=e42]
+          - text: 1 maiúscula
+        - generic [ref=e45]:
+          - img [ref=e47]
+          - text: 1 número
+        - generic [ref=e50]:
+          - img [ref=e52]
+          - text: 1 símbolo
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - generic [ref=e57]: Confirmar nova senha
+        - generic [ref=e58]:
+          - img [ref=e59]
+          - text: Senhas coincidem
+      - generic [ref=e62]:
+        - textbox "Confirmar nova senha Senhas coincidem" [ref=e63]:
+          - /placeholder: Repita a nova senha
+          - text: Centelha2026!
+        - button "Mostrar senha" [ref=e64] [cursor=pointer]:
+          - img [ref=e65]
+    - generic [ref=e67]:
+      - img [ref=e69]
+      - generic [ref=e72]:
+        - generic [ref=e73]: Encerraremos suas outras sessões
+        - generic [ref=e74]: Por segurança, você será desconectado de outros dispositivos.
+    - button "Redefinir senha" [ref=e75] [cursor=pointer]:
+      - text: Redefinir senha
+      - img [ref=e77]

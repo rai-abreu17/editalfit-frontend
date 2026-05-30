@@ -1,0 +1,418 @@
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.back {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--r-md);
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  color: var(--ink-700);
+  box-shadow: var(--sh-card);
+  flex-shrink: 0;
+}
+.back:hover {
+  color: var(--brand-700);
+}
+.draftLink {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand-700);
+}
+.draftLink:hover {
+  text-decoration: underline;
+}
+
+/* Aviso do modo edição (retorno de T14) */
+.editNotice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--warn-100);
+  border: 1px solid #fcd9a4;
+  border-radius: var(--r-lg);
+  padding: 14px 16px;
+  margin-bottom: 22px;
+}
+.editNoticeIcon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--r-md);
+  display: grid;
+  place-items: center;
+  background: var(--warn-500);
+  color: #fff;
+}
+.editNoticeTitle {
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--warn-700);
+  margin-bottom: 2px;
+}
+.editNoticeText {
+  font-size: 13px;
+  color: var(--warn-700);
+  opacity: 0.85;
+}
+
+.context {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 16px 18px;
+  box-shadow: var(--sh-card);
+  margin-bottom: 22px;
+}
+.contextEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-700);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.contextName {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  margin-bottom: 10px;
+}
+.contextMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+.aside {
+  font-size: 12.5px;
+  color: var(--ink-600);
+}
+.aside strong {
+  color: var(--ink-900);
+  font-weight: 700;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 14px 16px;
+  box-shadow: var(--sh-card);
+  border-left: 3px solid transparent;
+  transition: box-shadow 0.18s, border-color 0.18s;
+}
+.item:hover {
+  box-shadow: var(--sh-lift);
+}
+.is_enviado {
+  border-left-color: var(--ok-500);
+}
+.is_pendente {
+  border-left-color: var(--warn-500);
+}
+.is_erro {
+  border-left-color: var(--danger-500);
+}
+.dragOver {
+  box-shadow: 0 0 0 2px var(--brand-700), var(--sh-card);
+}
+.itemHead {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.itemIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: var(--surface-2);
+  color: var(--ink-500);
+  flex-shrink: 0;
+}
+.is_enviado .itemIcon {
+  background: var(--ok-100);
+  color: var(--ok-700);
+}
+.is_pendente .itemIcon {
+  background: var(--warn-100);
+  color: var(--warn-700);
+}
+.is_erro .itemIcon {
+  background: var(--danger-100);
+  color: var(--danger-700);
+}
+.itemName {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink-900);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.req {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ink-400);
+  background: rgba(13, 27, 62, 0.04);
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+.itemDesc {
+  font-size: 12.5px;
+  color: var(--ink-600);
+  margin-top: 2px;
+  line-height: 1.45;
+}
+.itemBody {
+  margin-top: 12px;
+}
+
+.drop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border: 1.5px dashed var(--border-strong);
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.drop:hover {
+  border-color: var(--brand-300);
+  background: var(--brand-50);
+}
+.dropFull {
+  opacity: 0.7;
+  cursor: default;
+}
+.dropText {
+  font-size: 12.5px;
+  color: var(--ink-600);
+  line-height: 1.4;
+}
+.dropText strong {
+  color: var(--ink-900);
+  font-weight: 700;
+}
+.dropCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--brand-700);
+  padding: 8px 14px;
+  border-radius: var(--r-pill);
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--surface-2);
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+}
+.fileIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--brand-50);
+  color: var(--brand-700);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.fileName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-900);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fileSize {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-500);
+  margin-top: 1px;
+}
+
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: var(--r-md);
+  font-size: 12.5px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+.note svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.notePend {
+  background: var(--warn-100);
+  color: var(--warn-700);
+}
+.noteErr {
+  background: var(--danger-100);
+  color: var(--danger-700);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-700);
+  padding: 7px 12px;
+  border-radius: var(--r-pill);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.action:hover {
+  color: var(--brand-700);
+  border-color: var(--brand-300);
+  background: var(--brand-50);
+}
+.actionDanger:hover {
+  color: var(--danger-700);
+  border-color: rgba(153, 27, 27, 0.22);
+  background: var(--danger-100);
+}
+
+/* CV list */
+.cv {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 16px;
+  box-shadow: var(--sh-card);
+}
+.cvHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.cvTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink-900);
+}
+.cvCount {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-500);
+}
+.cvCount strong {
+  color: var(--ink-900);
+}
+.cvList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+.cvItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--surface-2);
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+}
+.cvRemove {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: var(--ink-500);
+  flex-shrink: 0;
+}
+.cvRemove:hover {
+  color: var(--danger-700);
+  background: var(--danger-100);
+}
+
+.progressMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.bottomBar {
+  position: sticky;
+  bottom: 16px;
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: var(--surface);
+  border-radius: var(--r-pill);
+  box-shadow: 0 16px 40px -12px rgba(13, 27, 62, 0.3), 0 0 0 1px var(--border);
+  margin-top: 16px;
+}
+
+@media (max-width: 880px) {
+  .bottomBar {
+    bottom: 84px;
+  }
+}
+@media (max-width: 520px) {
+  .drop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  /* the two nowrap buttons don't fit side by side on small phones and
+     overflowed the viewport — stack them (primary on top), full width */
+  .bottomBar {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    border-radius: var(--r-xl);
+  }
+}

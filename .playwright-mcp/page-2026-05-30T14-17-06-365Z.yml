@@ -1,0 +1,98 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - link "EditalFit — início" [ref=e4] [cursor=pointer]:
+      - /url: /inicio
+      - text: EditalFit
+    - link "Novo projeto" [ref=e6] [cursor=pointer]:
+      - /url: /novo-projeto
+      - img [ref=e7]
+      - text: Novo projeto
+    - navigation "Navegação principal" [ref=e9]:
+      - generic [ref=e10]: Menu
+      - link "Início" [ref=e11] [cursor=pointer]:
+        - /url: /inicio
+        - img [ref=e12]
+        - text: Início
+      - link "Match de editais" [ref=e14] [cursor=pointer]:
+        - /url: /match
+        - img [ref=e15]
+        - text: Match de editais
+      - link "Modelos de documentos" [ref=e17] [cursor=pointer]:
+        - /url: /modelos
+        - img [ref=e18]
+        - text: Modelos de documentos
+      - link "Configurações" [ref=e21] [cursor=pointer]:
+        - /url: /configuracoes
+        - img [ref=e22]
+        - text: Configurações
+    - link "AL Ana Lima ana.lima@usp.br" [ref=e27] [cursor=pointer]:
+      - /url: /configuracoes
+      - generic [ref=e28]: AL
+      - generic [ref=e29]:
+        - generic [ref=e30]: Ana Lima
+        - generic [ref=e31]: ana.lima@usp.br
+  - generic [ref=e32]:
+    - banner [ref=e33]:
+      - button "Abrir menu" [ref=e34] [cursor=pointer]:
+        - img [ref=e35]
+      - generic [ref=e37]:
+        - img [ref=e38]
+        - searchbox "Buscar" [ref=e41]
+      - button "Notificações" [ref=e42] [cursor=pointer]:
+        - img [ref=e43]
+      - link "Sua conta" [ref=e47] [cursor=pointer]:
+        - /url: /configuracoes
+        - text: AL
+    - main [ref=e48]:
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - link "Voltar" [ref=e51] [cursor=pointer]:
+            - /url: /novo-projeto
+            - img [ref=e52]
+          - generic [ref=e54]: Solicitar edital
+        - generic [ref=e55]:
+          - heading "Não encontrou o edital?" [level=1] [ref=e56]
+          - paragraph [ref=e57]: Cole o link oficial do edital abaixo. Nossa equipe vai analisar e cadastrá-lo em breve.
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - generic [ref=e60]: URL do edital oficial
+            - textbox "URL do edital oficial" [ref=e62]:
+              - /placeholder: https://orgao.gov.br/edital-2026
+            - generic [ref=e63]:
+              - img [ref=e64]
+              - text: Cole o link da página oficial do órgão — onde o edital está publicado.
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - generic [ref=e69]: Nome do edital
+              - generic [ref=e70]: Opcional
+            - textbox "Nome do edital Opcional" [ref=e72]:
+              - /placeholder: "Ex.: Centelha — Ideação 2026"
+        - generic [ref=e73]:
+          - img [ref=e75]
+          - generic [ref=e78]:
+            - generic [ref=e79]: Sem prazo fixo de análise
+            - generic [ref=e80]: Validamos cada solicitação manualmente. Você é avisado assim que o edital for cadastrado — sem previsão garantida.
+        - button "Enviar solicitação" [disabled] [ref=e81]:
+          - text: Enviar solicitação
+          - img [ref=e83]
+        - generic [ref=e85]:
+          - text: Achou na lista?
+          - link "Voltar à busca →" [ref=e86] [cursor=pointer]:
+            - /url: /novo-projeto
+    - navigation "Navegação" [ref=e87]:
+      - link "Início" [ref=e88] [cursor=pointer]:
+        - /url: /inicio
+        - img [ref=e89]
+        - text: Início
+      - link "Match" [ref=e91] [cursor=pointer]:
+        - /url: /match
+        - img [ref=e92]
+        - text: Match
+      - link "Modelos" [ref=e94] [cursor=pointer]:
+        - /url: /modelos
+        - img [ref=e95]
+        - text: Modelos
+      - link "Conta" [ref=e98] [cursor=pointer]:
+        - /url: /configuracoes
+        - img [ref=e99]
+        - text: Conta

@@ -1,0 +1,81 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - link "EditalFit — início" [ref=e4] [cursor=pointer]:
+      - /url: /inicio
+      - text: EditalFit
+    - link "Novo projeto" [ref=e6] [cursor=pointer]:
+      - /url: /novo-projeto
+      - img [ref=e7]
+      - text: Novo projeto
+    - navigation "Navegação principal" [ref=e9]:
+      - generic [ref=e10]: Menu
+      - link "Início" [ref=e11] [cursor=pointer]:
+        - /url: /inicio
+        - img [ref=e12]
+        - text: Início
+      - link "Match de editais" [ref=e14] [cursor=pointer]:
+        - /url: /match
+        - img [ref=e15]
+        - text: Match de editais
+      - link "Modelos de documentos" [ref=e17] [cursor=pointer]:
+        - /url: /modelos
+        - img [ref=e18]
+        - text: Modelos de documentos
+      - link "Configurações" [ref=e21] [cursor=pointer]:
+        - /url: /configuracoes
+        - img [ref=e22]
+        - text: Configurações
+    - link "AL Ana Lima ana.lima@usp.br" [ref=e27] [cursor=pointer]:
+      - /url: /configuracoes
+      - generic [ref=e28]: AL
+      - generic [ref=e29]:
+        - generic [ref=e30]: Ana Lima
+        - generic [ref=e31]: ana.lima@usp.br
+  - generic [ref=e32]:
+    - banner [ref=e33]:
+      - button "Abrir menu" [ref=e34] [cursor=pointer]:
+        - img [ref=e35]
+      - generic [ref=e37]:
+        - img [ref=e38]
+        - searchbox "Buscar" [ref=e41]
+      - button "Notificações" [ref=e42] [cursor=pointer]:
+        - img [ref=e43]
+      - link "Sua conta" [ref=e47] [cursor=pointer]:
+        - /url: /configuracoes
+        - text: AL
+    - main [ref=e48]:
+      - generic [ref=e49]:
+        - img [ref=e51]
+        - heading "Comece seu primeiro projeto." [level=2] [ref=e54]
+        - paragraph [ref=e55]: Cole um edital ou descreva sua ideia — o EditalFit te entrega um diagnóstico em ~90 segundos.
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: "1"
+            - text: Cole o link ou PDF do edital
+          - generic [ref=e59]:
+            - generic [ref=e60]: "2"
+            - text: Descreva seu projeto em 2 frases
+          - generic [ref=e61]:
+            - generic [ref=e62]: "3"
+            - text: Receba diagnóstico por critério
+        - link "Criar meu primeiro projeto" [ref=e63] [cursor=pointer]:
+          - /url: /novo-projeto
+          - text: Criar meu primeiro projeto
+          - img [ref=e65]
+    - navigation "Navegação" [ref=e67]:
+      - link "Início" [ref=e68] [cursor=pointer]:
+        - /url: /inicio
+        - img [ref=e69]
+        - text: Início
+      - link "Match" [ref=e71] [cursor=pointer]:
+        - /url: /match
+        - img [ref=e72]
+        - text: Match
+      - link "Modelos" [ref=e74] [cursor=pointer]:
+        - /url: /modelos
+        - img [ref=e75]
+        - text: Modelos
+      - link "Conta" [ref=e78] [cursor=pointer]:
+        - /url: /configuracoes
+        - img [ref=e79]
+        - text: Conta

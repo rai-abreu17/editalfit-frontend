@@ -1,0 +1,341 @@
+.page {
+  max-width: 840px;
+  margin: 0 auto;
+}
+.head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.back {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--r-md);
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  color: var(--ink-700);
+  box-shadow: var(--sh-card);
+  flex-shrink: 0;
+}
+.back:hover {
+  color: var(--brand-700);
+}
+
+.hero {
+  background: var(--surface);
+  border-radius: var(--r-xl);
+  padding: 24px;
+  box-shadow: var(--sh-card-lg);
+  margin-bottom: 18px;
+}
+.agency {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-700);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.name {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  text-wrap: balance;
+}
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.section {
+  margin-bottom: 26px;
+}
+.objective {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 16px 18px;
+  box-shadow: var(--sh-card);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-700);
+  margin-top: 12px;
+}
+.sigma {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-500);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.critGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 10px;
+}
+.critCard {
+  position: relative;
+  background: var(--surface);
+  border-radius: var(--r-md);
+  padding: 14px 14px 12px;
+  box-shadow: var(--sh-card);
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.critCard:hover,
+.critCard:focus-within {
+  transform: translateY(-1px);
+  box-shadow: var(--sh-lift);
+}
+.critHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.critName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-900);
+  line-height: 1.3;
+}
+.critDesc {
+  font-size: 12.5px;
+  color: var(--ink-600);
+  line-height: 1.45;
+  margin-top: 2px;
+}
+.critWeight {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: var(--r-pill);
+  background: var(--brand-50);
+  color: var(--brand-700);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.critBar {
+  height: 4px;
+  background: var(--surface-2);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(30, 60, 120, 0.05);
+}
+.critBar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--brand-500) 0%, var(--brand-700) 100%);
+  border-radius: 999px;
+}
+.critSource {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--brand-700);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(13, 46, 107, 0.12);
+  padding: 4px 8px;
+  border-radius: var(--r-sm);
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: opacity 0.18s, transform 0.18s;
+}
+.critCard:hover .critSource,
+.critCard:focus-within .critSource {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stages timeline */
+.stages {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 8px 0;
+  box-shadow: var(--sh-card);
+}
+.stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  padding: 10px 16px;
+  align-items: flex-start;
+  gap: 12px;
+}
+.stage::before {
+  content: "";
+  position: absolute;
+  left: 31px;
+  top: 40px;
+  bottom: -2px;
+  width: 1.5px;
+  background: linear-gradient(180deg, rgba(13, 46, 107, 0.18) 0%, rgba(13, 46, 107, 0.04) 100%);
+}
+.stage:last-child::before {
+  display: none;
+}
+.stageNum {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--ink-600);
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 800;
+  border: 1px solid rgba(13, 27, 62, 0.06);
+}
+.stageCurrent .stageNum {
+  background: var(--brand-700);
+  color: #fff;
+  border-color: var(--brand-700);
+  box-shadow: 0 6px 14px -4px rgba(13, 46, 107, 0.4);
+}
+.stageDone .stageNum {
+  background: var(--ok-100);
+  color: var(--ok-700);
+}
+.stageBody {
+  padding: 4px 0;
+  min-width: 0;
+}
+.stageLabel {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink-900);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.stageCurrent .stageLabel {
+  color: var(--brand-700);
+}
+.stageDesc {
+  font-size: 12.5px;
+  color: var(--ink-600);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cat {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 13px;
+  background: var(--surface);
+  color: var(--ink-700);
+  border-radius: var(--r-pill);
+  box-shadow: var(--sh-card);
+}
+
+.links {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border-radius: var(--r-md);
+  padding: 12px 14px;
+  box-shadow: var(--sh-card);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.link:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--sh-lift);
+}
+.linkIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--brand-50);
+  color: var(--brand-700);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.linkIconAccent {
+  background: var(--accent-50);
+  color: var(--accent-700);
+}
+.linkBody {
+  flex: 1;
+  min-width: 0;
+}
+.linkTitle {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink-900);
+}
+.linkSub {
+  display: block;
+  font-size: 11.5px;
+  color: var(--ink-500);
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bottomBar {
+  position: sticky;
+  bottom: 16px;
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: var(--surface);
+  border-radius: var(--r-pill);
+  box-shadow: 0 16px 40px -12px rgba(13, 27, 62, 0.3), 0 0 0 1px var(--border);
+  margin-top: 8px;
+}
+
+@media (max-width: 880px) {
+  .bottomBar {
+    bottom: 84px;
+  }
+}
+@media (max-width: 560px) {
+  .critGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 520px) {
+  /* "Selecionar este edital" + "Voltar" don't fit side by side on small
+     phones — stack them (primary on top), full width, no horizontal scroll */
+  .bottomBar {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    border-radius: var(--r-xl);
+  }
+}
