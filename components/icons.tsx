@@ -520,3 +520,48 @@ export function StatusIcon({ status, ...props }: P & { status: "ok" | "warn" | "
     </svg>
   );
 }
+
+/* ---- Trilha de Aprendizado (Modo Aprender) ---- */
+export function IconCap(props: P) {
+  return (
+    <svg width={18} height={18} viewBox="0 0 24 24" fill="none" {...props}>
+      <path d="M12 4 2.5 8.5 12 13l9.5-4.5L12 4Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+      <path d="M6.5 10.5V15c0 1.1 2.46 2.4 5.5 2.4s5.5-1.3 5.5-2.4v-4.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M21.5 8.5V14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function IconTrophy(props: P) {
+  return (
+    <svg width={18} height={18} viewBox="0 0 24 24" fill="none" {...props}>
+      <path d="M7 4h10v4.5a5 5 0 0 1-10 0V4Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+      <path d="M7 5.5H4.5a1.8 1.8 0 0 0 0 3.6H6M17 5.5h2.5a1.8 1.8 0 0 1 0 3.6H18" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M12 13.5V16M9 20h6M9.5 20c0-1.4 1-2.4 2.5-2.4s2.5 1 2.5 2.4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconFlame(props: P) {
+  return (
+    <svg width={16} height={16} viewBox="0 0 24 24" fill="none" {...props}>
+      <path d="M12.5 3c.8 2.8-.9 4.2-2.2 5.7C9 10.1 8.2 11.4 8.2 13a4.3 4.3 0 0 0 8.6.2c0-1.6-.7-2.9-1.7-4-.4.7-1 1.1-1.8 1.2 1-2.4-.2-5-2.8-7.4Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconBolt(props: P) {
+  return (
+    <svg width={16} height={16} viewBox="0 0 24 24" fill="none" {...props}>
+      <path d="M13 2.5 4.5 13.5H10l-1 8 9.5-12H12l1-7Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconPlay(props: P) {
+  return (
+    <svg width={16} height={16} viewBox="0 0 24 24" fill="none" {...props}>
+      <path d="M7 4.8 18.5 12 7 19.2V4.8Z" fill="currentColor" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+    </svg>
+  );
+}

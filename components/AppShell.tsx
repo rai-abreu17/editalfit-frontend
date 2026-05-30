@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Brand } from "./Brand";
+import { AprenderTopbarStats } from "./app/AprenderTopbarStats";
 import { NAV } from "@/lib/nav";
 import { CURRENT_USER } from "@/lib/data";
 import { IconBell, IconMenu, IconPlus, IconSearch } from "./icons";
@@ -12,7 +13,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
-  const isRoot = ["/inicio", "/match", "/modelos", "/configuracoes"].includes(pathname);
+  const isRoot = ["/inicio", "/match", "/aprender", "/modelos", "/configuracoes"].includes(pathname);
 
   return (
     <div className={`shell ${open ? "drawer-open" : ""}`}>
@@ -76,6 +77,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <Brand />
             </Link>
             <div className="topbar__spacer" />
+            {pathname === "/aprender" && <AprenderTopbarStats />}
             <button className="icon-btn" type="button" aria-label="Notificações">
               <IconBell />
               <span className="dot" aria-hidden="true" />

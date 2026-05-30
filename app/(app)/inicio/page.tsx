@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PROJECTS, SUGGESTED_EDITAIS, CURRENT_USER } from "@/lib/data";
 import { ProjectCard } from "@/components/app/ProjectCard";
+import { AprenderHero } from "@/components/app/AprenderHero";
 import { IconArrow, IconFolderPlus, IconPlus, IconSparkles } from "@/components/icons";
 import styles from "./inicio.module.css";
 
@@ -16,6 +17,7 @@ export default async function InicioPage({
 
   return (
     <>
+      <AprenderHero />
       <section className={styles.hero}>
         <div className={styles.heroText}>
           <span className={styles.greet}>Olá, {CURRENT_USER.name}</span>
