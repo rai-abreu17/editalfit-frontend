@@ -5,7 +5,8 @@
   align-items: center;
   padding: 32px 20px 48px;
   background:
-    radial-gradient(ellipse 70% 40% at 50% 0%, rgba(120, 160, 230, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 50% -10%, rgba(13, 46, 107, 0.1) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 80% 100%, rgba(56, 189, 248, 0.06) 0%, transparent 50%),
     var(--canvas);
 }
 .brand {
@@ -126,19 +127,26 @@
   align-items: center;
   gap: 12px;
   padding: 14px;
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
   background: var(--surface);
   border-radius: var(--r-md);
   text-align: left;
-  transition: all 0.15s;
+  transition:
+    border-color 0.18s,
+    background 0.18s,
+    box-shadow 0.18s,
+    transform 0.16s;
 }
 .opt:hover {
-  border-color: var(--border-strong);
+  border-color: var(--brand-300);
+  background: var(--surface-2);
+  transform: translateY(-1px);
 }
 .opt.active {
   border-color: var(--brand-700);
   background: var(--brand-50);
   box-shadow: var(--focus-ring);
+  transform: translateY(0);
 }
 .radio {
   width: 20px;
@@ -290,18 +298,25 @@
   gap: 6px;
   padding: 18px 16px;
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r-md);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-lg);
   text-align: left;
-  transition: all 0.15s;
+  transition:
+    border-color 0.18s,
+    background 0.18s,
+    box-shadow 0.18s,
+    transform 0.16s;
 }
 .binaryCard:hover {
-  border-color: var(--border-strong);
+  border-color: var(--brand-300);
+  background: var(--surface-2);
+  transform: translateY(-1px);
 }
 .binaryCard.active {
   border-color: var(--brand-700);
   background: var(--brand-50);
   box-shadow: var(--focus-ring);
+  transform: translateY(0);
 }
 .binaryIcon {
   width: 38px;

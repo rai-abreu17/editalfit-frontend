@@ -36,7 +36,10 @@ function ProjetoInner() {
         <Link href="/inicio" className={styles.back} aria-label="Voltar">
           <IconBack />
         </Link>
-        <span className="eyebrow">Detalhes do projeto</span>
+        <span className="eyebrow" style={{ flex: 1 }}>Detalhes do projeto</span>
+        <button type="button" className={styles.deleteTop} onClick={() => setConfirmDelete(true)} aria-label="Excluir projeto">
+          <IconTrash />
+        </button>
       </header>
 
       <div className={styles.hero}>
@@ -153,9 +156,6 @@ function ProjetoInner() {
         <Link href="/diagnostico" className="btn btn--secondary">
           <IconTarget width={14} height={14} /> Último diagnóstico
         </Link>
-        <button type="button" className={styles.delete} onClick={() => setConfirmDelete(true)}>
-          <IconTrash /> Excluir
-        </button>
       </div>
 
       {confirmDelete && (

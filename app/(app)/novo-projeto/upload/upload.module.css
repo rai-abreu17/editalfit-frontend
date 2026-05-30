@@ -398,21 +398,19 @@
   margin-top: 16px;
 }
 
-@media (max-width: 880px) {
-  .bottomBar {
-    bottom: 84px;
-  }
-}
+
 @media (max-width: 520px) {
   .drop {
     flex-direction: column;
     align-items: flex-start;
   }
-  /* the two nowrap buttons don't fit side by side on small phones and
-     overflowed the viewport — stack them (primary on top), full width */
   .bottomBar {
-    flex-direction: column-reverse;
-    align-items: stretch;
-    border-radius: var(--r-xl);
+    padding: 10px;
+    gap: 8px;
+  }
+  .bottomBar > button {
+    flex: 1;
+    padding-left: 0;
+    padding-right: 0;
   }
 }

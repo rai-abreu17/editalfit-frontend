@@ -100,9 +100,7 @@ export default function EtapaPage() {
       </div>
 
       <div className={styles.bottomBar}>
-        <Link href="/novo-projeto" className="btn btn--secondary">
-          <IconArrow style={{ transform: "rotate(180deg)" }} width={14} height={14} /> Voltar
-        </Link>
+
         <button type="button" className="btn btn--primary" style={{ flex: 1, justifyContent: "center" }} disabled={!selectedId} onClick={() => router.push("/novo-projeto/upload")}>
           Continuar
           <span className="btn__arrow">

@@ -256,8 +256,4 @@
   flex: 1;
 }
 
-@media (max-width: 880px) {
-  .bottomBar {
-    bottom: 84px;
-  }
-}
+

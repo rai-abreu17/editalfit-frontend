@@ -168,6 +168,13 @@
   transform: translateY(-2px);
   box-shadow: var(--sh-lift);
 }
+.cardFeatured {
+  border-left: 3px solid var(--brand-700);
+  background: var(--surface-2);
+}
+.cardFeatured:hover {
+  background: var(--surface);
+}
 .cardHead {
   display: flex;
   align-items: flex-start;
@@ -400,5 +407,11 @@
 @media (max-width: 560px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+  .matchBadge {
+    padding: 5px 8px;
+  }
+  .matchNum {
+    font-size: 16px;
   }
 }

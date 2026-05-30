@@ -12,18 +12,15 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
+  const isRoot = ["/inicio", "/match", "/modelos", "/configuracoes"].includes(pathname);
 
   return (
     <div className={`shell ${open ? "drawer-open" : ""}`}>
       <div className="scrim" onClick={() => setOpen(false)} aria-hidden="true" />
 
       <aside className="sidebar">
-        <Link href="/inicio" className="sidebar__brand" aria-label="EditalFit — início">
-          <span className="brandmark" aria-hidden="true">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/editalfit-logo.png" alt="" />
-          </span>
-          EditalFit
+        <Link href="/inicio" className="sidebar__brand" aria-label="EditalFit — início" style={{ display: "block" }}>
+          <Brand />
         </Link>
 
         <Link
@@ -70,37 +67,42 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </aside>
 
       <div className="main">
-        <header className="topbar">
-          <button className="topbar__menu" type="button" aria-label="Abrir menu" onClick={() => setOpen(true)}>
-            <IconMenu />
-          </button>
-          <div className="topbar__search">
-            <IconSearch />
-            <input type="search" placeholder="Buscar editais, projetos…" aria-label="Buscar" />
-          </div>
-          <div className="topbar__spacer" />
-          <button className="icon-btn" type="button" aria-label="Notificações">
-            <IconBell />
-            <span className="dot" aria-hidden="true" />
-          </button>
-          <Link href="/configuracoes" className="avatar" aria-label="Sua conta">
-            {CURRENT_USER.initials}
-          </Link>
-        </header>
+        {isRoot && (
+          <header className="topbar">
+            <button className="topbar__menu" type="button" aria-label="Abrir menu" onClick={() => setOpen(true)}>
+              <IconMenu />
+            </button>
+            <Link href="/inicio" className="topbar__brand" aria-label="EditalFit — Início" style={{ display: "flex", textDecoration: "none" }}>
+              <Brand />
+            </Link>
+            <div className="topbar__spacer" />
+            <button className="icon-btn" type="button" aria-label="Notificações">
+              <IconBell />
+              <span className="dot" aria-hidden="true" />
+            </button>
+            <Link href="/configuracoes" className="avatar" aria-label="Sua conta">
+              {CURRENT_USER.initials}
+            </Link>
+          </header>
+        )}
 
-        <main className="content">{children}</main>
+        <main className="content" style={!isRoot ? { paddingBottom: 24 } : undefined}>
+          {children}
+        </main>
 
-        <nav className="bottom-nav" aria-label="Navegação">
-          {NAV.map((item) => {
-            const Icon = item.icon;
-            return (
-              <Link key={item.href} href={item.href} className={`bottom-nav__item ${isActive(item.href) ? "active" : ""}`}>
-                <Icon width={20} height={20} />
-                {item.short}
-              </Link>
-            );
-          })}
-        </nav>
+        {isRoot && (
+          <nav className="bottom-nav" aria-label="Navegação">
+            {NAV.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link key={item.href} href={item.href} className={`bottom-nav__item ${isActive(item.href) ? "active" : ""}`}>
+                  <Icon width={20} height={20} />
+                  {item.short}
+                </Link>
+              );
+            })}
+          </nav>
+        )}
       </div>
     </div>
   );

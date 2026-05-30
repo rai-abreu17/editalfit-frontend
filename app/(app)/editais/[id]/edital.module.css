@@ -320,11 +320,7 @@
   margin-top: 8px;
 }
 
-@media (max-width: 880px) {
-  .bottomBar {
-    bottom: 84px;
-  }
-}
+
 @media (max-width: 560px) {
   .critGrid {
     grid-template-columns: 1fr;
@@ -334,8 +330,12 @@
   /* "Selecionar este edital" + "Voltar" don't fit side by side on small
      phones — stack them (primary on top), full width, no horizontal scroll */
   .bottomBar {
-    flex-direction: column-reverse;
-    align-items: stretch;
-    border-radius: var(--r-xl);
+    padding: 10px;
+    gap: 8px;
+  }
+  .bottomBar > * {
+    flex: 1;
+    padding-left: 0;
+    padding-right: 0;
   }
 }

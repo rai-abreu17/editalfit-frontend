@@ -279,6 +279,18 @@ h4 {
   background: var(--brand-50);
 }
 
+.btn--outline {
+  background: transparent;
+  border: 1.5px solid var(--border-strong);
+  color: var(--ink-900);
+  font-weight: 600;
+}
+.btn--outline:hover {
+  border-color: var(--brand-300);
+  color: var(--brand-700);
+  background: var(--brand-50);
+}
+
 .btn--danger {
   background: var(--danger-500);
   color: #fff;
@@ -1349,19 +1361,21 @@ h4 {
     background: rgba(13, 27, 62, 0.42);
   }
   .topbar__menu {
-    display: grid;
+    display: none;
   }
-  /* let the search field use the available width on mobile instead of
-     splitting it ~50/50 with the spacer (which collapsed it to ~80px) */
+  .topbar .avatar {
+    display: none;
+  }
+  .topbar__brand {
+    display: flex;
+  }
   .topbar {
     padding: 0 16px;
     gap: 12px;
+    justify-content: space-between;
   }
   .topbar__spacer {
     display: none;
-  }
-  .topbar__search {
-    max-width: none;
   }
   .content {
     padding: 20px 16px 96px;

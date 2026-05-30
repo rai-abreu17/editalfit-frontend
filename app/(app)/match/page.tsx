@@ -122,11 +122,12 @@ function MatchInner() {
             </span>
           </div>
           <div className={styles.grid}>
-            {results.map((e) => {
+            {results.map((e, idx) => {
               const mt = profileComplete ? badgeTone(e.match) : "low";
               const tone = deadlineTone(e.daysLeft);
+              const isFeatured = idx === 0;
               return (
-                <div key={e.id} className={styles.card} tabIndex={0}>
+                <div key={e.id} className={`${styles.card} ${isFeatured ? styles.cardFeatured : ""}`} tabIndex={0}>
                   <div className={styles.cardHead}>
                     <div style={{ minWidth: 0 }}>
                       <div className={styles.agency}>

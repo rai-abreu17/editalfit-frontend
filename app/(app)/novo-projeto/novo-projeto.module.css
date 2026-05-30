@@ -422,11 +422,7 @@
   flex: 1;
 }
 
-@media (max-width: 880px) {
-  .bottomBar {
-    bottom: 84px;
-  }
-}
+
 @media (max-width: 560px) {
   .grid {
     grid-template-columns: 1fr;

@@ -277,17 +277,18 @@
   box-shadow: 0 16px 40px -12px rgba(13, 27, 62, 0.3), 0 0 0 1px var(--border);
   margin-top: 18px;
 }
-.delete {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  font-weight: 600;
+.deleteTop {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--r-md);
+  display: grid;
+  place-items: center;
   color: var(--ink-500);
-  padding: 10px 12px;
-  border-radius: var(--r-pill);
+  background: var(--surface);
+  box-shadow: var(--sh-card);
+  transition: color 0.15s, background 0.15s;
 }
-.delete:hover {
+.deleteTop:hover {
   color: var(--danger-700);
   background: var(--danger-100);
 }
@@ -337,8 +338,17 @@
     grid-template-columns: 1fr;
     gap: 8px;
   }
+}
+@media (max-width: 520px) {
   .bottomBar {
-    bottom: 84px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px;
+    gap: 8px;
+    border-radius: var(--r-xl);
+  }
+  .bottomBar a {
+    justify-content: center;
+    font-size: 13.5px;
   }
 }

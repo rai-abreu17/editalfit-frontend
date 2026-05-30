@@ -25,6 +25,57 @@
 
 .section {
   margin-bottom: 24px;
+  scroll-margin-top: calc(var(--topbar-h) + 16px);
+}
+
+.hubGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.hubCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-xs);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+.hubCard:hover {
+  background: var(--surface-2);
+  box-shadow: var(--sh-card);
+  transform: translateY(-2px);
+}
+.hubCardIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--brand-50);
+  color: var(--brand-700);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.hubCardBody {
+  flex: 1;
+  min-width: 0;
+}
+.hubCardTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink-900);
+  margin-bottom: 2px;
+}
+.hubCardDesc {
+  font-size: 13px;
+  color: var(--ink-600);
+}
+.hubCardArrow {
+  color: var(--ink-400);
 }
 .sectionTitle {
   display: inline-flex;
