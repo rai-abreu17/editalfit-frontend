@@ -31,3 +31,9 @@ next-env.d.ts
 .vscode/*
 !.vscode/extensions.json
 .idea/
+
+# claude code local settings
+.claude/settings.local.json
+
+# playwright mcp artifacts
+.playwright-mcp/
