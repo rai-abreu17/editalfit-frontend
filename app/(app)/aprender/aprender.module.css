@@ -1404,11 +1404,19 @@
   animation: mascotBob 5s ease-in-out infinite 1.6s;
 }
 
-/* Pingo — lado ESQUERDO, módulos finais (m8) */
+/* Nova — lado ESQUERDO, meio da jornada (m6) */
+.mascotNova {
+  height: 420px;
+  top: 230px;
+  left: -160px;
+  animation: mascotBob 5s ease-in-out infinite 2.4s;
+}
+
+/* Pingo — lado DIREITO, módulos finais (m8) */
 .mascotPingo {
   height: 350px;
   top: 240px;
-  left: -40px;
+  right: -40px;
   animation: mascotBob 5s ease-in-out infinite 3.2s;
 }
 
@@ -1451,9 +1459,14 @@
     top: 180px;
     right: -30px;
   }
+  .mascotNova {
+    height: 300px;
+    top: 160px;
+    left: -80px;
+  }
   .mascotPingo {
     height: 210px;
     top: 144px;
-    left: -24px;
+    right: -24px;
   }
 }

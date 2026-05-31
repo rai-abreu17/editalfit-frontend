@@ -82,7 +82,7 @@ export default function AprenderPage() {
     setProgress(p);
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(p));
-    } catch {}
+    } catch { }
   };
 
   const completed = progress.completed;
@@ -141,67 +141,70 @@ export default function AprenderPage() {
       <div className={styles.body}>
         <div className={styles.trailWrap} style={{ position: "relative" }}>
           <div className={styles.map}>
-          <div id="trail-map" className={styles.trail} style={{ "--fill": `${pct}%` } as React.CSSProperties}>
-            <TrailSpineSvg pct={pct} />
+            <div id="trail-map" className={styles.trail} style={{ "--fill": `${pct}%` } as React.CSSProperties}>
+              <TrailSpineSvg pct={pct} />
 
-            {MODULES.map((mod) => {
-              const mp = moduleProgress(mod, completed);
-              const active = mod.lessons.some((l) => l.id === curId);
-              const state = mp.complete ? "done" : active ? "active" : "locked";
-              return (
-                <div key={mod.id} className={styles.modGroup}>
-                  <UnitHeader mod={mod} mp={mp} state={state} />
-                  <div className={styles.nodes}>
-                    {/* Espaço (atividade extra) para o mascote respirar sem bater no cabeçalho */}
-                    {["m2", "m4", "m8"].includes(mod.id) && (
-                      <div className={styles.mascotSpacer}>
-                        {mod.id === "m2" && (
-                          <img src="/mascots/lia.svg" alt="Mascote Lia acenando" className={`${styles.mascot} ${styles.mascotLia}`} />
-                        )}
-                        {mod.id === "m4" && (
-                          <img src="/mascots/theo.svg" alt="Mascote Theo apontando" className={`${styles.mascot} ${styles.mascotTheo}`} />
-                        )}
-                        {mod.id === "m8" && (
-                          <img src="/mascots/pingo.svg" alt="Mascote cachorro Pingo sorrindo" className={`${styles.mascot} ${styles.mascotPingo}`} />
-                        )}
-                      </div>
-                    )}
-                    {mod.lessons.map((lesson) => {
-                      nodeIdx += 1;
-                      const f = SWAY[nodeIdx % SWAY.length];
-                      const lState = getLessonState(lesson.id, completed);
-                      return (
-                        <TrailNode
-                          key={lesson.id}
-                          lesson={lesson}
-                          state={lState}
-                          factor={f}
-                          onOpen={() => openLesson(lesson.id)}
-                        />
-                      );
-                    })}
+              {MODULES.map((mod) => {
+                const mp = moduleProgress(mod, completed);
+                const active = mod.lessons.some((l) => l.id === curId);
+                const state = mp.complete ? "done" : active ? "active" : "locked";
+                return (
+                  <div key={mod.id} className={styles.modGroup}>
+                    <UnitHeader mod={mod} mp={mp} state={state} />
+                    <div className={styles.nodes}>
+                      {/* Espaço (atividade extra) para o mascote respirar sem bater no cabeçalho */}
+                      {["m2", "m4", "m6", "m8"].includes(mod.id) && (
+                        <div className={styles.mascotSpacer}>
+                          {mod.id === "m2" && (
+                            <img src="/mascots/lia.svg" alt="Mascote Lia acenando" className={`${styles.mascot} ${styles.mascotLia}`} />
+                          )}
+                          {mod.id === "m4" && (
+                            <img src="/mascots/theo.svg" alt="Mascote Theo apontando" className={`${styles.mascot} ${styles.mascotTheo}`} />
+                          )}
+                          {mod.id === "m6" && (
+                            <img src="/mascots/nova.svg" alt="Mascote nova com tablet" className={`${styles.mascot} ${styles.mascotNova}`} />
+                          )}
+                          {mod.id === "m8" && (
+                            <img src="/mascots/pingo.svg" alt="Mascote cachorro Pingo sorrindo" className={`${styles.mascot} ${styles.mascotPingo}`} />
+                          )}
+                        </div>
+                      )}
+                      {mod.lessons.map((lesson) => {
+                        nodeIdx += 1;
+                        const f = SWAY[nodeIdx % SWAY.length];
+                        const lState = getLessonState(lesson.id, completed);
+                        return (
+                          <TrailNode
+                            key={lesson.id}
+                            lesson={lesson}
+                            state={lState}
+                            factor={f}
+                            onOpen={() => openLesson(lesson.id)}
+                          />
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
 
-            {/* Nó final — troféu da trilha */}
-            <div className={styles.nodes}>
-              <div className={styles.node} style={{ "--f": 0 } as React.CSSProperties} data-spine-point="node" data-node-state={trailDone ? "completed" : "locked"}>
-                <button
-                  type="button"
-                  className={`${styles.disc} ${trailDone ? styles.discTrophy : styles.discLocked}`}
-                  onClick={() => !trailDone && showToast("Conclua todas as lições para destravar o troféu.")}
-                  aria-label="Troféu da trilha"
-                >
-                  {trailDone ? <IconTrophy width={30} height={30} /> : <IconLock width={22} height={22} />}
-                </button>
-                <span className={`${styles.nodeCap} ${trailDone ? styles.nodeCapDone : ""}`}>
-                  {trailDone ? "Trilha concluída" : "Troféu final"}
-                </span>
+              {/* Nó final — troféu da trilha */}
+              <div className={styles.nodes}>
+                <div className={styles.node} style={{ "--f": 0 } as React.CSSProperties} data-spine-point="node" data-node-state={trailDone ? "completed" : "locked"}>
+                  <button
+                    type="button"
+                    className={`${styles.disc} ${trailDone ? styles.discTrophy : styles.discLocked}`}
+                    onClick={() => !trailDone && showToast("Conclua todas as lições para destravar o troféu.")}
+                    aria-label="Troféu da trilha"
+                  >
+                    {trailDone ? <IconTrophy width={30} height={30} /> : <IconLock width={22} height={22} />}
+                  </button>
+                  <span className={`${styles.nodeCap} ${trailDone ? styles.nodeCapDone : ""}`}>
+                    {trailDone ? "Trilha concluída" : "Troféu final"}
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
           </div>
 
           <button type="button" className={styles.resetBtn} onClick={reset}>
@@ -357,13 +360,11 @@ function TrailNode({
       )}
       <button
         type="button"
-        className={`${styles.disc} ${
-          state === "completed" ? styles.discDone : state === "current" ? styles.discCurrent : styles.discLocked
-        }`}
+        className={`${styles.disc} ${state === "completed" ? styles.discDone : state === "current" ? styles.discCurrent : styles.discLocked
+          }`}
         onClick={onOpen}
-        aria-label={`${lesson.title} — ${
-          state === "completed" ? "concluída" : state === "current" ? "disponível" : "bloqueada"
-        }`}
+        aria-label={`${lesson.title} — ${state === "completed" ? "concluída" : state === "current" ? "disponível" : "bloqueada"
+          }`}
         aria-disabled={state === "locked"}
       >
         {state === "current" && <span className={styles.pulse} aria-hidden="true" />}
@@ -585,9 +586,8 @@ function LessonPlayer({
       <div className={styles.playerFoot}>
         {checked && (isQuiz || isChecklist) && (
           <div
-            className={`${styles.feedback} ${
-              isChecklist || correct ? styles.feedbackOk : styles.feedbackNudge
-            }`}
+            className={`${styles.feedback} ${isChecklist || correct ? styles.feedbackOk : styles.feedbackNudge
+              }`}
             role="status"
           >
             <span className={styles.feedbackIcon}>
@@ -609,9 +609,8 @@ function LessonPlayer({
         )}
         <button
           type="button"
-          className={`${styles.actionBtn} ${actionDisabled ? styles.actionDisabled : ""} ${
-            checked && isQuiz && !correct ? styles.actionNudge : ""
-          }`}
+          className={`${styles.actionBtn} ${actionDisabled ? styles.actionDisabled : ""} ${checked && isQuiz && !correct ? styles.actionNudge : ""
+            }`}
           disabled={actionDisabled}
           onClick={onAction}
         >
@@ -737,7 +736,7 @@ function TrailSpineSvg({ pct }: { pct: number }) {
 
       for (let i = 0; i < nodes.length; i++) {
         const node = nodes[i];
-        
+
         let targetEl = node;
         const type = node.getAttribute("data-spine-point");
         if (type === "node") {
